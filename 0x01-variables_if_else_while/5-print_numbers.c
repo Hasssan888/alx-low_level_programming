@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet.
+ * main - Prints numbers from 0 to 9.
  *
  * Return: Always 0 (Success)
  */
@@ -10,18 +10,16 @@ int main(void)
 
 {
 
-	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
-
 	int i;
 
 
 
 
-	for (i = 0; i < 26; i++)
+	for (i = 0; i < 10; i++)
 
 	{
 
-		putchar(alp[i]);
+		printf("%d", i);
 
 	}
 
