@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - print numbers 1 - 100 followed by a new line
@@ -12,19 +13,19 @@
 
 int main(void)
 {
-	int nbr;
+	int i;
 
-	for (nbr = 1; nbr <= 100; nbr++)
+	for (i = 1; i <= 100; i++)
 	{
-		if (nbr % 3 == 0 && !(nbr % 5 == 0))
+		if (i % 3 == 0 && !(i % 5 == 0))
 			printf("Fizz");
-		else if (nbr % 5  == 0 && !(nbr % 3 == 0))
+		else if (i % 5  == 0 && !(i % 3 == 0))
 			printf("Buzz");
-		else if (nbr % 3 == 0 && nbr % 5 == 0)
+		else if (i % 3 == 0 && i % 5 == 0)
 			printf("FizzBuzz");
 		else
-			printf("%d", nbr);
-		if (nbr != 100)
+			printf("%d", i);
+		if (i != 100)
 			printf(" ");
 		else
 			printf("\n");
