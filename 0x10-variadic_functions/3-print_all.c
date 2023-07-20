@@ -2,44 +2,44 @@
 
 /**
  * format_char - formats cahracter
- * @separator: the string seprator
+ * @separator: the string separator
  * @ap: argument pointer
  */
 
-void format_char(char *separtor, va_list ap)
+void format_char(char *separator, va_list ap)
 {
-	printf("%s%c", separtor, va_arg(ap, int));
+	printf("%s%c", separator, va_arg(ap, int));
 }
 
 /**
  * format_int - formats integer
- * @separator: the string seprator
+ * @separator: the string separator
  * @ap: argument pointer
  */
 
-void format_int(char *separtor, va_list ap)
+void format_int(char *separator, va_list ap)
 {
-	printf("%s%d", separtor, va_arg(ap, int));
+	printf("%s%d", separator, va_arg(ap, int));
 }
 
 /**
- * format_flot - formats float
- * @separator: the string seprator
+ * format_float - formats float
+ * @separator: the string separator
  * @ap: argument pointer
  */
 
-void format_float(char *separtor, va_list ap)
+void format_float(char *separator, va_list ap)
 {
-	printf("%s%f", separtor, va_arg(ap, double));
+	printf("%s%f", separator, va_arg(ap, double));
 }
 
 /**
  * format_string -formats string
- * @separator: the string seprator
+ * @separator: the string separator
  * @ap: argument pointer
  */
 
-void format_string(char *separtor, va_list ap)
+void format_string(char *separator, va_list ap)
 {
 	char *str = va_arg(ap, char *);
 
@@ -47,7 +47,7 @@ void format_string(char *separtor, va_list ap)
 	case 1:
 		str = "(nil)";
 
-	printf("%s%s", separtor, str);
+	printf("%s%s", separator, str);
 }
 
 /**
@@ -58,7 +58,7 @@ void format_string(char *separtor, va_list ap)
 void print_all(const char * const format, ...)
 {
 	int i = 0, j;
-	char *separtor = "";
+	char *separator = "";
 	va_list ap;
 	token_t tokens[] = {
 		{"c", format_char},
@@ -76,8 +76,8 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == tokens[j].token[0])
 			{
-				tokens[j].f(separtor, ap);
-				separtor = ", ";
+				tokens[j].f(separator, ap);
+				separtaor = ", ";
 			}
 			j++;
 		}
